@@ -95,14 +95,14 @@ INSERT INTO bill (bid, pid, paymentid, treatmentid, cost) VALUES
 (7, 7, 7, 7, 700.00)
 ;
 
-INSERT INTO payment (paymentid, bid, method, status, amount) VALUES
-(1, 1, 'Cash', 'Paid', 100.00),
-(2, 2, 'Cheque', 'Pending', 200.00),
-(3, 3, 'Visa', 'Due', 300.00),
-(4, 4, 'Visa', 'Paid', 400.00),
-(5, 5, 'Installments', 'Pending', 500.00),
-(6, 6, 'Cash', 'Paid', 600.00),
-(7, 7, 'Visa', 'Due', 700.00)
+INSERT INTO payment (paymentid, bid, method, status) VALUES
+(1, 1, 'Cash', 'Paid'),
+(2, 2, 'Cheque', 'Pending'),
+(3, 3, 'Visa', 'Due'),
+(4, 4, 'Visa', 'Paid'),
+(5, 5, 'Installments', 'Pending'),
+(6, 6, 'Cash', 'Paid'),
+(7, 7, 'Visa', 'Due')
 ;
 
 INSERT INTO specialist (sid, specializeIn, fname, lname) VALUES
