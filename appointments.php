@@ -40,15 +40,14 @@ header('Content-Type: text/html; charset=utf-8');
 				while($row = $result->fetch_array())
 				{		
 					echo "<tr>";
-					echo "<td><h2>" .$row['pfname'] . "</h2></td>";
-					echo "<td><h2>" .$row['plname'] . "</h2></td>";
-					echo "<td><h2><img src=".$host1.$row['patientpic_path'] . " width=100 height=100/></h2></td>";
-					echo "<td><h2>" .$row['appDate'] . "</h2></td>";
-					echo "<td><h2>" .$row['treatment'] . "</h2></td>";
-					echo "<td><h2>" .$row['fname'] . "</h2></td>";
-					echo "<td><h2>" .$row['lname'] . "</h2></td>";
-					echo "<td><h2><a href='$link_address?pid=" .$row['pid'] . "'>Bill</a></h2></td>";
-					//echo "<td><h2><a href='$link_address?pid=10'>Bill</a></h2></td>";
+					echo "<td><h3>" .$row['pfname'] . "</h3></td>";
+					echo "<td><h3>" .$row['plname'] . "</h3></td>";
+					echo "<td><h3><img src=".$host1.$row['patientpic_path'] . " width=100 height=100/></h3></td>";
+					echo "<td><h3>" .$row['appDate'] . "</h3></td>";
+					echo "<td><h3>" .$row['treatment'] . "</h3></td>";
+					echo "<td><h3>" .$row['fname'] . "</h3></td>";
+					echo "<td><h3>" .$row['lname'] . "</h3></td>";
+					echo "<td><h3><a href='$link_address?pid=" .$row['pid'] . "'>Bill</a></h3></td>";
 				    echo "</tr>";
 				}
 			?>

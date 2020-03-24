@@ -40,13 +40,13 @@ header('Content-Type: text/html; charset=utf-8');
 				while($row = $result->fetch_array())
 				{		
 					echo "<tr>";
-					echo "<td><h2>" .$row['pfname'] . "</h2></td>";
-					echo "<td><h2>" .$row['plname'] . "</h2></td>";
-					echo "<td><h2>" .$row['appDate'] . "</h2></td>";
-					echo "<td><h2>" .$row['treatment'] . "</h2></td>";
-					echo "<td><h2>" .$row['cost'] . "</h2></td>";
-					echo "<td><h2>" .$row['method'] . "</h2></td>";
-					echo "<td><h2>" .$row['status'] . "</h2></td>";
+					echo "<td><h3>" .$row['pfname'] . "</h3></td>";
+					echo "<td><h3>" .$row['plname'] . "</h3></td>";
+					echo "<td><h3>" .$row['appDate'] . "</h3></td>";
+					echo "<td><h3>" .$row['treatment'] . "</h3></td>";
+					echo "<td><h3>" .$row['cost'] . "</h3></td>";
+					echo "<td><h3>" .$row['method'] . "</h3></td>";
+					echo "<td><h3>" .$row['status'] . "</h3	></td>";
 				    echo "</tr>";
 				}
 			?>
