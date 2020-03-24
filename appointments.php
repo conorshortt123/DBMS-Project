@@ -19,13 +19,15 @@ header('Content-Type: text/html; charset=utf-8');
 				<td><h2>Treatment Type</h2></td>
 				<td><h2>Specialist Firstname</h2></td>
 				<td><h2>Specialist Lastname</h2></td>
+				<td><h2>Appointment Bill</h2></td>
 			</tr>
 			<?php
 				$host = "localhost";
 				$host1 = "http://localhost";
 				$user = "root";
 				$password = "";
-				$database = "patientsdb";				
+				$database = "patientsdb";
+				$link_address = "#";
 				
 				$query = "Select p.fname as pfname, p.lname as plname, p.patientpic_path, a.appDate, t.treatment, s.fname, s.lname from patient as p inner join appointment as a on p.pid = a.pid inner join treatment as t on a.sid = t.sid inner join specialist as s on t.sid = s.sid";
 				//Connect to the database
@@ -46,6 +48,7 @@ header('Content-Type: text/html; charset=utf-8');
 					echo "<td><h2>" .$row['treatment'] . "</h2></td>";
 					echo "<td><h2>" .$row['fname'] . "</h2></td>";
 					echo "<td><h2>" .$row['lname'] . "</h2></td>";
+					echo "<td><h2><a href='$link_address'>Bill</a></h2></td>";
 				    echo "</tr>";
 				}
 			?>
