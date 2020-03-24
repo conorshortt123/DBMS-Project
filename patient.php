@@ -18,8 +18,6 @@ header('Content-Type: text/html; charset=utf-8');
 				<td><h2>Date of Birth</h2></td>
 				<td><h2>Email</h2></td>
 				<td><h2>Address</h2></td>
-				<td><h2>Appointment ID</h2></td>
-				<td><h2>Bill ID</h2></td>
 				<td><h2>Patient Pic</h2></td>
 			</tr>
 			<?php			
@@ -47,8 +45,6 @@ header('Content-Type: text/html; charset=utf-8');
 					echo "<td><h2>" .$row['dob'] . "</h2></td>";
 					echo "<td><h2>" .$row['email'] . "</h2></td>";
 					echo "<td><h2>" .$row['address'] . "</h2></td>";
-					echo "<td><h2>" .$row['appid'] . "</h2></td>";
-					echo "<td><h2>" .$row['billid'] . "</h2></td>";
 					echo "<td><h2><img src=".$host1.$row['patientpic_path'] . " width=100 height=100/></h2></td>";
 				    echo "</tr>";
 				}

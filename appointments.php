@@ -27,9 +27,8 @@ header('Content-Type: text/html; charset=utf-8');
 				$user = "root";
 				$password = "";
 				$database = "patientsdb";
-				$link_address = "#";
-				
-				$query = "Select p.fname as pfname, p.lname as plname, p.patientpic_path, a.appDate, t.treatment, s.fname, s.lname from patient as p inner join appointment as a on p.pid = a.pid inner join treatment as t on a.sid = t.sid inner join specialist as s on t.sid = s.sid";
+				$query = "Select p.pid, p.fname as pfname, p.lname as plname, p.patientpic_path, a.appDate, t.treatment, s.fname, s.lname from patient as p inner join appointment as a on p.pid = a.pid inner join treatment as t on a.sid = t.sid inner join specialist as s on t.sid = s.sid";
+				$link_address = "http://localhost/bill.php";
 				//Connect to the database
 				$connect = mysqli_connect($host,$user,$password,$database) or die("Problem connecting.");
 				//Set connection to UTF-8
@@ -48,7 +47,8 @@ header('Content-Type: text/html; charset=utf-8');
 					echo "<td><h2>" .$row['treatment'] . "</h2></td>";
 					echo "<td><h2>" .$row['fname'] . "</h2></td>";
 					echo "<td><h2>" .$row['lname'] . "</h2></td>";
-					echo "<td><h2><a href='$link_address'>Bill</a></h2></td>";
+					echo "<td><h2><a href='$link_address?pid=" .$row['pid'] . "'>Bill</a></h2></td>";
+					//echo "<td><h2><a href='$link_address?pid=10'>Bill</a></h2></td>";
 				    echo "</tr>";
 				}
 			?>
