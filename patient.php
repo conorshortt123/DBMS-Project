@@ -9,8 +9,8 @@ header('Content-Type: text/html; charset=utf-8');
 	</head>	
 	<body>
 		<h1 align="center">Mulcahy's Dental Database</h1>
-		<button><a href="http://localhost/appointments.php">Appointments</a></button>
-		<table border="3">
+		<button style="margin-left:142px;margin-bottom:20px"><a href="http://localhost/appointments.php">Appointments</a></button>
+		<table border="3" align="center">
 			<tr>
 				<td><h2>Patient ID</h2></td>
 				<td><h2>Firstname</h2></td>
